@@ -21,17 +21,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         appBarTheme: const AppBarTheme(
           backgroundColor:
-              Color.fromARGB(255, 209, 182, 243), // Cor de fundo da AppBar
+              Color.fromARGB(255, 209, 182, 243), 
         ),
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: Colors.black, // Cor de fundo do BottomNavigationBar
+          backgroundColor: Colors.black, 
           selectedItemColor:
-              Color.fromARGB(255, 165, 140, 199), // Cor do item selecionado
-          unselectedItemColor: Colors.white, // Cor dos itens não selecionados
-          showSelectedLabels: true, // Mostrar rótulos dos itens selecionados
+              Color.fromARGB(255, 165, 140, 199),
+          unselectedItemColor: Colors.white, 
+          showSelectedLabels: true, 
           showUnselectedLabels:
-              true, // Mostrar rótulos dos itens não selecionados
-        ),
+              true, 
+        )
       ),
       home: const MyHomePage(),
     );
@@ -76,30 +76,35 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.people),
+            icon: Icon(Icons.people,
+            color: Color.fromARGB(255, 165, 110, 8),),
             label: 'Alunos',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.school,
-              color: Colors.blue,
+              color: Color.fromARGB(255, 165, 110, 8),
             ),
             label: 'Professores',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.assignment),
+            icon: Icon(Icons.assignment,
+            color: Color.fromARGB(255, 165, 110, 8),),
             label: 'Matrículas',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.school,
+            color: Color.fromARGB(255, 165, 110, 8),),
             label: 'Cursos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
+            icon: Icon(Icons.business,
+            color: Color.fromARGB(255, 165, 110, 8),),
             label: 'Departamentos',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.book),
+            icon: Icon(Icons.book,
+            color: Color.fromARGB(255, 165, 110, 8),),
             label: 'Disciplinas',
           ),
         ],

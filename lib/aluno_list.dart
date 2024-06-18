@@ -25,8 +25,6 @@ class _AlunoListState extends State<AlunoList> {
     print("Fetch Studsts");
     final dio = Dio();
     const String myUril = 'http://192.168.0.123:3000/api/alunos';
-    const String myUr = 'https://fakestoreapi.com/products';
-    final url = Uri.parse(myUril);
 
     try {
       final response = await dio.get(myUril);
@@ -37,7 +35,7 @@ class _AlunoListState extends State<AlunoList> {
       if (response.statusCode == 200) {
         print("auiiiii");
         setState(() {
-//_alunos = json.decode(response.data);
+          _alunos = response.data as List<dynamic>;
         });
       } else {
         // ignore: use_build_context_synchronously

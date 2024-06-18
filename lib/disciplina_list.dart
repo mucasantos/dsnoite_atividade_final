@@ -21,7 +21,7 @@ class _DisciplinaListState extends State<DisciplinaList> {
   }
 
   Future<void> _fetchDisciplinas() async {
-    final response = await http.get(Uri.parse('http://localhost:3000/api/disciplinas'));
+    final response = await http.get(Uri.parse('http://192.168.0.123:3000/api/disciplinas'));
 
     if (response.statusCode == 200) {
       setState(() {
@@ -36,7 +36,7 @@ class _DisciplinaListState extends State<DisciplinaList> {
   }
 
   Future<void> _deleteDisciplina(int id) async {
-    final response = await http.delete(Uri.parse('http://localhost:3000/api/disciplinas/$id'));
+    final response = await http.delete(Uri.parse('http://192.168.0.123:3000/api/disciplinas/$id'));
 
     if (response.statusCode == 200) {
       // ignore: use_build_context_synchronously
